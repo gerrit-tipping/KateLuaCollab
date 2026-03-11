@@ -1,7 +1,6 @@
 -- Setup diagram syntax C#/B#/V#x# C=composite B=Bool V=Video Input #=channel number #x# pixel measured from bottem left up then right, d=distance a=azimuth e=elivation
 
 -- Inputs
--- Reactor Temperature
 
 -- Outputs
 
