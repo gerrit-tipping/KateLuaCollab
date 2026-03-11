@@ -26,7 +26,10 @@ function onTick()--            	Tick function that will be executed every logic 
     --Actual Program Starts
 	  if Tick    --									Lua is silly and the non I/O portion has to be in an if loop or everything dies and I don't know why so frankly this is just my tribute to the magic smoke gods to apease them so the magic smoke will run the program
   	then
-
+		if EngineOn == True And EngineSpeed < 4 --								engine must be on and the speed that it moves must be less than four for the ignitor to turn on. Otherwise the ignitor turns off
+			then IgnitorOn = True
+		elseif
+		IgnitorOn = False
 	  	if Tick == 1--							Initialize Lists and Variables
 		  then
   		elseif Tick >= 108010--					Prevents Interger Overflow on Tick breaking things (Tick Reset arbitrarily set to every 30 minutes or 1.5 default ingame days)
