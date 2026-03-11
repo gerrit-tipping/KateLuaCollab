@@ -14,16 +14,19 @@
 	NumOut = {}
 	DataOutputs = 1
 	pi = 3.14159265
-	
-	
-	
+	EngineOn = false
+	EngineSpeed = 0
+	IgnitorOn = false
 	
 
 --Functions
 function onTick()--            	Tick function that will be executed every logic tick
   -- Data Input
-  
-    --Actual Program Starts
+	
+	EngineSpeed = input.getNumber(1)		
+	EngineOn = input.getBool(1)		
+    
+	--Actual Program Starts
 	  if Tick    --									Lua is silly and the non I/O portion has to be in an if loop or everything dies and I don't know why so frankly this is just my tribute to the magic smoke gods to apease them so the magic smoke will run the program
   	then
 		if EngineOn == True And EngineSpeed < 4 --								engine must be on and the speed that it moves must be less than four for the ignitor to turn on. Otherwise the ignitor turns off
@@ -41,4 +44,6 @@ function onTick()--            	Tick function that will be executed every logic 
   	end
     --Actual Program Ends
   
-  -- Data Output
+  -- Data Outputinput
+	output.setBool(1, IgnitorOn)
+end
